@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 4 - Exercise 04: Forms</title>
+    <title>HTML Forms - Registration & Search</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,12 +21,10 @@
         }
         h1 {
             color: #333;
-            text-align: center;
         }
         h2 {
             color: #555;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
+            margin-top: 0;
         }
         .form-group {
             margin-bottom: 20px;
@@ -34,14 +32,13 @@
         label {
             display: block;
             margin-bottom: 5px;
-            color: #333;
             font-weight: bold;
+            color: #333;
         }
         input[type="text"],
         input[type="email"],
         input[type="date"],
-        select,
-        input[type="search"] {
+        select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
@@ -52,41 +49,51 @@
         input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="date"]:focus,
-        select:focus,
-        input[type="search"]:focus {
+        select:focus {
             outline: none;
-            border-color: #007bff;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
         }
         button {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 20px;
+            padding: 12px 30px;
+            font-size: 16px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 16px;
             font-weight: bold;
-            transition: background-color 0.3s;
         }
-        button:hover {
-            background-color: #0056b3;
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
         }
-        .form-note {
-            color: #666;
-            font-size: 12px;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .search-btn {
+            background-color: #008CBA;
+            color: white;
+        }
+        .search-btn:hover {
+            background-color: #007399;
+        }
+        .info {
+            background-color: #e7f3fe;
+            border-left: 4px solid #2196F3;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
     <h1>HTML Forms Exercise</h1>
 
-    <!-- Registration Form (POST) -->
+    <!-- POST Registration Form -->
     <div class="form-container">
-        <h2>Registration Form (POST)</h2>
+        <h2>Registration Form (POST Method)</h2>
+        <div class="info">
+            <strong>ℹ️ Note:</strong> This form uses POST method. After submission, you will see the confirmation page.
+        </div>
         <form method="POST" action="https://formspree.io/f/xpwzpzrd">
             <div class="form-group">
                 <label for="first_name">First Name:</label>
@@ -101,11 +108,11 @@
             <div class="form-group">
                 <label for="gender">Gender:</label>
                 <select id="gender" name="gender" required>
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                    <option value="prefer_not_to_say">Prefer not to say</option>
+                    <option value="">-- Select Gender --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
                 </select>
             </div>
 
@@ -119,22 +126,23 @@
                 <input type="email" id="email" name="email" required>
             </div>
 
-            <button type="submit">Register</button>
-            <p class="form-note">This form uses POST method to submit data securely to Formspree.</p>
+            <button type="submit" class="submit-btn">Register</button>
         </form>
     </div>
 
-    <!-- Search Form (GET) -->
+    <!-- GET Search Form -->
     <div class="form-container">
-        <h2>Search Form (GET)</h2>
+        <h2>Search Form (GET Method)</h2>
+        <div class="info">
+            <strong>ℹ️ Note:</strong> This form uses GET method. After submission, you will see the search data in the address bar.
+        </div>
         <form method="GET" action="https://httpbin.org/get">
             <div class="form-group">
                 <label for="search_name">Search:</label>
-                <input type="search" id="search_name" name="search_name" placeholder="Enter your search query...">
+                <input type="text" id="search_name" name="search_name" placeholder="Enter search term..." required>
             </div>
 
-            <button type="submit">Search</button>
-            <p class="form-note">This form uses GET method. Your search query will appear in the address bar URL.</p>
+            <button type="submit" class="search-btn">Search</button>
         </form>
     </div>
 
