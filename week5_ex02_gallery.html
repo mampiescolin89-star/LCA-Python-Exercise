@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Image Gallery</title>
+    <link rel="stylesheet" href="week5_ex02_style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gallery Showcase</h1>
+            <p>Explore our collection of stunning images</p>
+        </header>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="landscapes">Landscapes</button>
+            <button class="filter-btn" data-filter="portraits">Portraits</button>
+            <button class="filter-btn" data-filter="architecture">Architecture</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery">
+            <!-- Landscapes -->
+            <div class="gallery-card" data-category="landscapes">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Mountain Landscape">
+                <div class="card-overlay">
+                    <p class="description">Majestic mountain peaks at sunset</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Mountain Vista</h3>
+                    <span class="category-tag">Landscapes</span>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="landscapes">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Forest Trail">
+                <div class="card-overlay">
+                    <p class="description">Serene forest pathway through nature</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Forest Trail</h3>
+                    <span class="category-tag">Landscapes</span>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="landscapes">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Beach Sunset">
+                <div class="card-overlay">
+                    <p class="description">Golden hour at the pristine beach</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Beach Sunset</h3>
+                    <span class="category-tag">Landscapes</span>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="landscapes">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Ocean Waves">
+                <div class="card-overlay">
+                    <p class="description">Crashing waves with dramatic skies</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Ocean Waves</h3>
+                    <span class="category-tag">Landscapes</span>
+                </div>
+            </div>
+
+            <!-- Portraits -->
+            <div class="gallery-card" data-category="portraits">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Professional Portrait">
+                <div class="card-overlay">
+                    <p class="description">Professional studio portrait session</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Studio Portrait</h3>
+                    <span class="category-tag">Portraits</span>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="portraits">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Lifestyle Portrait">
+                <div class="card-overlay">
+                    <p class="description">Candid lifestyle portrait photography</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Lifestyle Shot</h3>
+                    <span class="category-tag">Portraits</span>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="portraits">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Family Portrait">
+                <div class="card-overlay">
+                    <p class="description">Warm family portrait in natural light</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Family Moment</h3>
+                    <span class="category-tag">Portraits</span>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="portraits">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Creative Portrait">
+                <div class="card-overlay">
+                    <p class="description">Creative portrait with artistic composition</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Creative Vision</h3>
+                    <span class="category-tag">Portraits</span>
+                </div>
+            </div>
+
+            <!-- Architecture -->
+            <div class="gallery-card" data-category="architecture">
+                <img src="https://images.unsplash.com/photo-1511797656310-fc3ee573b280?w=400&h=300&fit=crop" alt="Modern Building">
+                <div class="card-overlay">
+                    <p class="description">Contemporary architectural masterpiece</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Modern Design</h3>
+                    <span class="category-tag">Architecture</span>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="architecture">
+                <img src="https://images.unsplash.com/photo-1511797656310-fc3ee573b280?w=400&h=300&fit=crop" alt="Historic Structure">
+                <div class="card-overlay">
+                    <p class="description">Timeless historic architectural design</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Historic Charm</h3>
+                    <span class="category-tag">Architecture</span>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="architecture">
+                <img src="https://images.unsplash.com/photo-1511797656310-fc3ee573b280?w=400&h=300&fit=crop" alt="Urban Landscape">
+                <div class="card-overlay">
+                    <p class="description">Urban skyline photography</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Urban Skyline</h3>
+                    <span class="category-tag">Architecture</span>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="architecture">
+                <img src="https://images.unsplash.com/photo-1511797656310-fc3ee573b280?w=400&h=300&fit=crop" alt="Interior Design">
+                <div class="card-overlay">
+                    <p class="description">Stunning interior design details</p>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Interior Elegance</h3>
+                    <span class="category-tag">Architecture</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="week5_ex02_script.js"></script>
+</body>
+</html>
